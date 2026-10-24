@@ -1,0 +1,2 @@
+# dizayn
+dizayn haqida
