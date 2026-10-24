@@ -16,31 +16,31 @@ This repository is a runnable React/TypeScript frontend prototype. Catalog edits
 
 ## Sitemap
 
-| Route | Purpose |
-| --- | --- |
-| `/` | Editorial homepage, hero product discovery, featured products and stories |
-| `/shop` | Searchable, sortable and filterable catalog |
-| `/collections` | Curated coffee collections |
-| `/collections/:slug` | Collection story and relevant products |
-| `/product/:slug` | Product gallery, variants, tasting information and purchase controls |
-| `/bundles` | Coffee bundle discovery |
-| `/origins` | Growing-region discovery and origin information |
-| `/wishlist` | Saved products |
-| `/search` | Search results and empty-result recovery |
-| `/cart` | Editable line items, coupon, shipping estimate and totals |
-| `/checkout` | Contact, address, delivery and demonstration order review |
-| `/order-success` | Demonstration order confirmation |
-| `/account/auth` | Local demo login, registration and password-recovery presentation |
-| `/account` | Profile and subscription management |
-| `/account/orders` | Locally saved order history |
-| `/account/orders/:id` | Order contents, status and tracking presentation |
-| `/subscription` | Coffee preference, weight and delivery-frequency selection |
-| `/about` | Brand story and sourcing philosophy |
-| `/journal` | Editorial listing and category discovery |
-| `/journal/:slug` | Reading experience and related coffee discovery |
-| `/contact` | Validated demonstration contact form and support information |
-| `/help` | Searchable shipping, returns, payment and coffee FAQs |
-| `/admin/*` | Overview, analytics, orders, products, inventory, customers, promotions, reviews, content, subscriptions and settings |
+| Route                 | Purpose                                                                                                               |
+| --------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `/`                   | Editorial homepage, hero product discovery, featured products and stories                                             |
+| `/shop`               | Searchable, sortable and filterable catalog                                                                           |
+| `/collections`        | Curated coffee collections                                                                                            |
+| `/collections/:slug`  | Collection story and relevant products                                                                                |
+| `/product/:slug`      | Product gallery, variants, tasting information and purchase controls                                                  |
+| `/bundles`            | Coffee bundle discovery                                                                                               |
+| `/origins`            | Growing-region discovery and origin information                                                                       |
+| `/wishlist`           | Saved products                                                                                                        |
+| `/search`             | Search results and empty-result recovery                                                                              |
+| `/cart`               | Editable line items, coupon, shipping estimate and totals                                                             |
+| `/checkout`           | Contact, address, delivery and demonstration order review                                                             |
+| `/order-success`      | Demonstration order confirmation                                                                                      |
+| `/account/auth`       | Local demo login, registration and password-recovery presentation                                                     |
+| `/account`            | Profile and subscription management                                                                                   |
+| `/account/orders`     | Locally saved order history                                                                                           |
+| `/account/orders/:id` | Order contents, status and tracking presentation                                                                      |
+| `/subscription`       | Coffee preference, weight and delivery-frequency selection                                                            |
+| `/about`              | Brand story and sourcing philosophy                                                                                   |
+| `/journal`            | Editorial listing and category discovery                                                                              |
+| `/journal/:slug`      | Reading experience and related coffee discovery                                                                       |
+| `/contact`            | Validated demonstration contact form and support information                                                          |
+| `/help`               | Searchable shipping, returns, payment and coffee FAQs                                                                 |
+| `/admin/*`            | Overview, analytics, orders, products, inventory, customers, promotions, reviews, content, subscriptions and settings |
 
 The primary navigation exposes shopping and storytelling destinations. Account, wishlist and cart remain available globally. Product and article links use their explicit detail routes; an unknown resource must provide a useful recovery path.
 
@@ -55,20 +55,20 @@ The primary navigation exposes shopping and storytelling destinations. Account, 
 
 ## Design foundations
 
-| Semantic role | Color | Use |
-| --- | --- | --- |
-| Primary accent | `#E13B32` | Brand graphics, prominent controls and accents |
-| Espresso | `#211315` | Dark hero and deep surfaces |
-| Burgundy | `#33191D` | Secondary dark features |
-| Background | `#F6F4EF` | Main warm ivory canvas |
-| Surface | `#FFFFFF` | Inputs, cards and elevated controls |
-| Primary text | `#191719` | Readable copy and headings |
-| Coffee | `#80513C` | Supporting coffee-tone surfaces |
-| Caramel | `#D8A574` | Decorative highlights and packaging details |
+| Semantic role        | Color     | Use                                                                   |
+| -------------------- | --------- | --------------------------------------------------------------------- |
+| Primary accent       | `#E13B32` | Brand graphics, prominent controls and accents                        |
+| Espresso             | `#211315` | Dark hero and deep surfaces                                           |
+| Burgundy             | `#33191D` | Secondary dark features                                               |
+| Background           | `#F6F4EF` | Main warm ivory canvas                                                |
+| Surface              | `#FFFFFF` | Inputs, cards and elevated controls                                   |
+| Primary text         | `#191719` | Readable copy and headings                                            |
+| Coffee               | `#80513C` | Supporting coffee-tone surfaces                                       |
+| Caramel              | `#D8A574` | Decorative highlights and packaging details                           |
 | Muted reference tone | `#8B8581` | Decorative/subtle details; verify contrast before using for body text |
-| Success | `#286246` | Successful actions and available status |
-| Warning | `#8A570C` | Inventory and attention states |
-| Error | `#B62B25` | Validation and destructive action feedback |
+| Success              | `#286246` | Successful actions and available status                               |
+| Warning              | `#8A570C` | Inventory and attention states                                        |
+| Error                | `#B62B25` | Validation and destructive action feedback                            |
 
 Tokens describe semantic intent; readable text must meet WCAG AA against its actual background. Red/ivory combinations and muted small copy require measured contrast and, when needed, a darker functional variant. Never communicate status through color alone.
 
@@ -80,11 +80,11 @@ Spacing follows a 4px base with 8/12/16/24/32/48/64/96px intervals. Prefer 16–
 
 Validate at 375, 390, 430, 768, 1024, 1280, 1440 and 1920px widths.
 
-| Size | Structural treatment |
-| --- | --- |
-| 1280–1920 | Airy horizontal header, 12-column editorial rhythm, layered hero packages, multi-column shop and two-column product/checkout layouts |
-| 768–1024 | Condensed navigation, reduced hero lettering, deliberately repositioned package art, two-column catalog and adapted sidebar controls |
-| 375–430 | Compact header with accessible menu, recomposed hero, comfortable 44px targets, single-column editorial/checkout layouts and compact product grids |
+| Size      | Structural treatment                                                                                                                               |
+| --------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1280–1920 | Airy horizontal header, 12-column editorial rhythm, layered hero packages, multi-column shop and two-column product/checkout layouts               |
+| 768–1024  | Condensed navigation, reduced hero lettering, deliberately repositioned package art, two-column catalog and adapted sidebar controls               |
+| 375–430   | Compact header with accessible menu, recomposed hero, comfortable 44px targets, single-column editorial/checkout layouts and compact product grids |
 
 Wireframe order is consistent: header → route title or primary feature → task controls → main content → contextual recommendations → newsletter/footer. Product pages place identity and purchase decisions before detailed editorial information on narrow screens. Checkout keeps the summary available without obscuring form fields. Administration prioritizes its current task and makes dense tables horizontally scrollable within their own container rather than overflowing the entire viewport.
 

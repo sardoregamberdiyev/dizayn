@@ -14,11 +14,11 @@ All website images are retained locally in `public/images`; the running applicat
 
 The following images were generated specifically for this project using the native image generation tool, then encoded as JPEG for web delivery:
 
-| File | Subject |
-| --- | --- |
-| `coffee-beans.jpg` | Roasted arabica bean macro, warm espresso lighting |
-| `coffee-farm.jpg` | Illustrative Indonesian-inspired coffee plantation landscape |
-| `coffee-roasting.jpg` | Specialty coffee roastery cooling tray |
+| File                  | Subject                                                      |
+| --------------------- | ------------------------------------------------------------ |
+| `coffee-beans.jpg`    | Roasted arabica bean macro, warm espresso lighting           |
+| `coffee-farm.jpg`     | Illustrative Indonesian-inspired coffee plantation landscape |
+| `coffee-roasting.jpg` | Specialty coffee roastery cooling tray                       |
 
 These are illustrative brand concepts, not evidence of a real farm, supplier or roastery. Do not attribute the generated landscapes to a specific actual grower or geographic site.
 

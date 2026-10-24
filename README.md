@@ -34,13 +34,13 @@ The store is deliberately a browser-based prototype. Cart, wishlist, catalog edi
 
 ## Routes
 
-| Area | Routes |
-| --- | --- |
-| Discovery | `/`, `/shop`, `/search`, `/collections`, `/collections/:slug`, `/origins`, `/bundles` |
-| Shopping | `/product/:slug`, `/wishlist`, `/cart`, `/checkout`, `/order-success` |
-| Content | `/about`, `/journal`, `/journal/:slug`, `/contact`, `/help` |
-| Account | `/account/auth`, `/account`, `/account/orders`, `/account/orders/:id`, `/subscription` |
-| Administration | `/admin` and the administration navigation tabs |
+| Area           | Routes                                                                                 |
+| -------------- | -------------------------------------------------------------------------------------- |
+| Discovery      | `/`, `/shop`, `/search`, `/collections`, `/collections/:slug`, `/origins`, `/bundles`  |
+| Shopping       | `/product/:slug`, `/wishlist`, `/cart`, `/checkout`, `/order-success`                  |
+| Content        | `/about`, `/journal`, `/journal/:slug`, `/contact`, `/help`                            |
+| Account        | `/account/auth`, `/account`, `/account/orders`, `/account/orders/:id`, `/subscription` |
+| Administration | `/admin` and the administration navigation tabs                                        |
 
 ## Validation
 

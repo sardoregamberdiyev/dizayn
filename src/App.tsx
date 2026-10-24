@@ -1,11 +1,82 @@
 import { Routes, Route, useLocation, Link } from 'react-router-dom';
 import { Header, Footer, ScrollToTop, Toast } from './components/Layout';
 import HomePage from './pages/HomePage';
-import { ShopPage, ProductPage, CollectionsPage, CollectionPage, BundlesPage, WishlistPage, CartPage, CheckoutPage, OrderSuccessPage, SearchPage } from './pages/CommercePages';
-import { AboutPage, JournalPage, ArticlePage, OriginsPage, ContactPage, HelpPage, SubscriptionPage, AuthPage, AccountPage, OrdersPage, OrderDetailPage } from './pages/ContentPages';
+import {
+  ShopPage,
+  ProductPage,
+  CollectionsPage,
+  CollectionPage,
+  BundlesPage,
+  WishlistPage,
+  CartPage,
+  CheckoutPage,
+  OrderSuccessPage,
+  SearchPage,
+} from './pages/CommercePages';
+import {
+  AboutPage,
+  JournalPage,
+  ArticlePage,
+  OriginsPage,
+  ContactPage,
+  HelpPage,
+  SubscriptionPage,
+  AuthPage,
+  AccountPage,
+  OrdersPage,
+  OrderDetailPage,
+} from './pages/ContentPages';
 import { AdminPage } from './pages/AdminPages';
 
 export default function App() {
   const admin = useLocation().pathname.startsWith('/admin');
-  return <><ScrollToTop/><a className="skip-link" href="#main-content">Skip to content</a>{!admin && <Header/>}<Routes><Route path="/" element={<HomePage/>}/><Route path="/shop" element={<ShopPage/>}/><Route path="/search" element={<SearchPage/>}/><Route path="/collections" element={<CollectionsPage/>}/><Route path="/collections/:slug" element={<CollectionPage/>}/><Route path="/bundles" element={<BundlesPage/>}/><Route path="/product/:slug" element={<ProductPage/>}/><Route path="/wishlist" element={<WishlistPage/>}/><Route path="/cart" element={<CartPage/>}/><Route path="/checkout" element={<CheckoutPage/>}/><Route path="/order-success" element={<OrderSuccessPage/>}/><Route path="/about" element={<AboutPage/>}/><Route path="/origins" element={<OriginsPage/>}/><Route path="/journal" element={<JournalPage/>}/><Route path="/journal/:slug" element={<ArticlePage/>}/><Route path="/contact" element={<ContactPage/>}/><Route path="/help" element={<HelpPage/>}/><Route path="/subscription" element={<SubscriptionPage/>}/><Route path="/account/auth" element={<AuthPage/>}/><Route path="/account" element={<AccountPage/>}/><Route path="/account/orders" element={<OrdersPage/>}/><Route path="/account/orders/:id" element={<OrderDetailPage/>}/><Route path="/admin/*" element={<AdminPage/>}/><Route path="*" element={<main id="main-content" className="page-shell empty-state"><span className="eyebrow">404 · A SMALL DETOUR</span><h1>THIS CUP IS EMPTY.</h1><p>Let’s get you back to something good.</p><Link className="button button-primary" to="/">Back to home</Link></main>}/></Routes>{!admin && <Footer/>}<Toast/></>;
+  return (
+    <>
+      <ScrollToTop />
+      <a className="skip-link" href="#main-content">
+        Skip to content
+      </a>
+      {!admin && <Header />}
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/shop" element={<ShopPage />} />
+        <Route path="/search" element={<SearchPage />} />
+        <Route path="/collections" element={<CollectionsPage />} />
+        <Route path="/collections/:slug" element={<CollectionPage />} />
+        <Route path="/bundles" element={<BundlesPage />} />
+        <Route path="/product/:slug" element={<ProductPage />} />
+        <Route path="/wishlist" element={<WishlistPage />} />
+        <Route path="/cart" element={<CartPage />} />
+        <Route path="/checkout" element={<CheckoutPage />} />
+        <Route path="/order-success" element={<OrderSuccessPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/origins" element={<OriginsPage />} />
+        <Route path="/journal" element={<JournalPage />} />
+        <Route path="/journal/:slug" element={<ArticlePage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/help" element={<HelpPage />} />
+        <Route path="/subscription" element={<SubscriptionPage />} />
+        <Route path="/account/auth" element={<AuthPage />} />
+        <Route path="/account" element={<AccountPage />} />
+        <Route path="/account/orders" element={<OrdersPage />} />
+        <Route path="/account/orders/:id" element={<OrderDetailPage />} />
+        <Route path="/admin/*" element={<AdminPage />} />
+        <Route
+          path="*"
+          element={
+            <main id="main-content" className="page-shell empty-state">
+              <span className="eyebrow">404 · A SMALL DETOUR</span>
+              <h1>THIS CUP IS EMPTY.</h1>
+              <p>Let’s get you back to something good.</p>
+              <Link className="button button-primary" to="/">
+                Back to home
+              </Link>
+            </main>
+          }
+        />
+      </Routes>
+      {!admin && <Footer />}
+      <Toast />
+    </>
+  );
 }
